@@ -1,0 +1,13 @@
+version: "2"
+services:
+  fluent:
+    build: 
+      context: .
+      dockerfile: Dockerfile.stdout
+    image: diogok/fluentbit:stdout-0.0.5
+    ports:
+      - 9514:9514/udp
+      - 9515:9515/udp
+      - 24224:24224/udp
+      - 5432:5432/udp
+      - 9600:9600
